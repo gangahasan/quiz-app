@@ -8,7 +8,7 @@ const Home = () => {
       <p>
         Test your knowledge and challenge yourself with our quiz.Please
         <span>
-          <Link to="/login">Login</Link>
+          <Link to="/login" style={{fontSize:"18px",fontWeight:"600", color:"teal"}}>Login</Link>
         </span>{" "}
         to get Started
       </p>
