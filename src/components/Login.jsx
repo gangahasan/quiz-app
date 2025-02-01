@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import {useContext} from "react"
 import {UserContext} from '../context/AuthContext'
+import "../styles/login.css"
 const intialdata = {username:"",password:""}
 const Login = () => {
     const [userdata,setUserdata] = useState(intialdata);
