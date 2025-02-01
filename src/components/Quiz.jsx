@@ -71,7 +71,7 @@ const Quiz = () => {
                 <button onClick={handleShow} style={{backgroundColor:"blue",color:"white",border:"none"}}> {isShow? "Hide Answer":"Show Answer"}</button>
             </div>
         ))}
-        <button onClick={{handleSubmit}} style={{backgroundColor:"blue",color:"white",border:"none",fontSize:"22px"}}>Submit</button>
+        <button onClick={{handleSubmit}} style={{backgroundColor:"blue",color:"white",border:"none",fontSize:"22px",padding:"20px",borderRadius:"10px"}}>Submit</button>
         </div>
     </div>
   );
