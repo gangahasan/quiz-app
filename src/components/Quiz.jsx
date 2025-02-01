@@ -32,6 +32,24 @@ const Quiz = () => {
         setIsShow(!isShow)
 
     }
+    const handleSubmit=async()=>{
+        const response = await fetch(
+          "https://universal-plaid-prune.glitch.me/api/questions/api/submit",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                answers: questions.map((question, index) => ({
+                    id: user.id,
+                    answer: question.options[question.answerIndex]
+                }))
+            }),
+          }
+        );
+        if(response.ok)
+        alert("Quiz Submitted Successfully")
+    }
     if(loading){
         return <h1>Loading...</h1>
     }
@@ -53,6 +71,7 @@ const Quiz = () => {
                 <button onClick={handleShow} style={{backgroundColor:"blue",color:"white",border:"none"}}> {isShow? "Hide Answer":"Show Answer"}</button>
             </div>
         ))}
+        <button onClick={{handleSubmit}} style={{backgroundColor:"blue",color:"white",border:"none",fontSize:"22px"}}>Submit</button>
         </div>
     </div>
   );
